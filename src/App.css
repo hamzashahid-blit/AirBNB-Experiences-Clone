@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  height: 70px;
+  display: flex;
+  padding: 20px 36px;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.17);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Solve safari issue */
+.nav--logo {
+  max-width: 100px;
+}
+
+.hero {
+  margin: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  /* background-color: gray; */
+}
+
+.hero--image {
+  height: 350px;
+}
+
+.hero--title {
+  font-size: 3.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero--description {
+  margin: 0px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  width: 55%;
+}
+
+.card {
+  margin: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 300;
+  position: relative;
+  /* background-color: lightblue; */
+}
+
+.card--picture {
+  height: 300px;
+}
+
+.card--stats {
+  margin-top: 10px;
+  line-height: 1.7rem;
+}
+
+.card--star {
+  height: 0.8rem;
+}
+
+.card--reviews, .card--place{
+  color: darkgray;
+}
+
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--cost {
+  font-weight: 500;
+}
+
+.card--per-person {
+  width: 100%;
+}
+
+.card--sold-out-badge, .card--online-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 2px 7px;
+  font-size: 15px;
+  border-radius: 6px;
+}
+
+.card--sold-out-badge {
+  background-color: white;
+}
+
+.card--online-badge {
+  background-color: #66cc00;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-list {
+  display: flex;
+  justify-content: start;
+  flex: 0 0 auto;
+  overflow: scroll;
 }
